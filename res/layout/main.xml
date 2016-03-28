@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pitcher Scouting"
+            android:id="@+id/Pitcher_Scouting_Text_View" android:layout_gravity="center_horizontal"
+            android:textSize="40dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp" android:textStyle="bold"/>
+    <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="Starter"
+            android:id="@+id/Starter_Button"
+            android:layout_below="@+id/Pitcher_Scouting_Text_View" android:layout_toStartOf="@+id/Relief_Button"
+            android:background="#cc0033"/>
+    <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="Relief"
+            android:id="@+id/Relief_Button" android:layout_alignTop="@+id/Starter_Button"
+            android:background="#FFFFFF"
+            android:layout_alignEnd="@+id/Pitcher_Scouting_Text_View"/>
+    <Spinner
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:id="@+id/Team_Select_Spinner"
+            android:layout_marginTop="96dp"
+            android:spinnerMode="dropdown"
+            android:layout_marginEnd="29dp" android:layout_below="@+id/Starter_Button"
+            android:layout_toStartOf="@+id/Default_Image_View"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team:"
+            android:id="@+id/Team_Text_View"
+            android:textSize="25dp"
+            android:layout_alignBottom="@+id/Team_Select_Spinner" android:layout_toStartOf="@+id/Team_Select_Spinner"/>
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/Default_Image_View"
+            android:layout_marginTop="53dp" android:src="@drawable/MLB" android:layout_below="@+id/Starter_Button"
+            android:layout_centerHorizontal="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strikes:"
+            android:id="@+id/Strikes_Text_View"
+            android:layout_marginTop="65dp"
+            android:textSize="25dp"
+            android:layout_below="@+id/Default_Image_View" android:layout_toStartOf="@+id/Strikes_Starter_Minus_Button"
+            android:layout_marginEnd="9dp"/>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:id="@+id/Strikes_Starter_Minus_Button"
+            android:background="#fb5c5c" android:textSize="40dp" android:textStyle="bold"
+            android:layout_marginEnd="22dp" android:layout_alignBottom="@+id/Strikes_Edit_Text"
+            android:layout_toStartOf="@+id/Team_Text_View"/>
+    <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Strikes_Edit_Text"
+            android:layout_alignBottom="@+id/Strikes_Text_View" android:layout_toEndOf="@+id/Strikes_Text_View"
+            android:layout_marginStart="50dp"/>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:id="@+id/Strikes_Starter_Plus_Button"
+            android:layout_alignTop="@+id/Strikes_Starter_Minus_Button" android:layout_toEndOf="@+id/Strikes_Edit_Text"
+            android:textSize="40dp" android:textStyle="bold" android:background="#9dc4e7"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Balls:"
+              android:id="@+id/Balls_Text_View"
+              android:textSize="25dp"
+              android:layout_alignBottom="@+id/Balls_Starter_Minus_Button"
+              android:layout_alignEnd="@+id/Team_Select_Spinner" android:layout_marginEnd="15dp"/>
+    <Button style="?android:attr/buttonStyleSmall" android:layout_width="50dp" android:layout_height="50dp"
+            android:text="-" android:id="@+id/Balls_Starter_Minus_Button"
+            android:background="#fb5c5c" android:textSize="40dp" android:textStyle="bold"
+            android:layout_alignBottom="@+id/Balls_Edit_Text" android:layout_toEndOf="@+id/Balls_Text_View"/>
+    <EditText android:layout_width="100dp" android:layout_height="wrap_content" android:id="@+id/Balls_Edit_Text"
+              android:layout_alignBottom="@+id/Strikes_Starter_Plus_Button" android:layout_centerHorizontal="true"/>
+    <Button style="?android:attr/buttonStyleSmall" android:layout_width="50dp" android:layout_height="50dp"
+            android:text="+" android:id="@+id/Balls_Starter_Plus_Button"
+            android:textSize="40dp" android:textStyle="bold" android:background="#9dc4e7"
+            android:layout_alignBottom="@+id/Balls_Edit_Text" android:layout_toEndOf="@+id/Balls_Edit_Text"/>
+    <EditText
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="First Initial"
+            android:ems="10"
+            android:id="@+id/First_Initial_Starter_Edit_Text"
+            android:layout_alignTop="@+id/Team_Select_Spinner" android:layout_toEndOf="@+id/Outs_Text_View"/>
+    <EditText android:layout_width="108dp" android:layout_height="wrap_content" android:inputType="textPersonName"
+              android:text="Last Name" android:ems="10" android:id="@+id/Last_Name_Starter_Edit_Text"
+              android:layout_alignTop="@+id/First_Initial_Starter_Edit_Text"
+              android:layout_toEndOf="@+id/First_Initial_Starter_Edit_Text"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starting Pitcher&apos;s Name"
+            android:id="@+id/Starting_Pitcher_Name_Text_View"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/Default_Image_View" android:layout_toEndOf="@+id/Relief_Button"
+            android:layout_marginStart="10dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Outs:"
+              android:id="@+id/Outs_Text_View" android:textSize="25dp"
+              android:layout_alignTop="@+id/Balls_Text_View"
+              android:layout_alignStart="@+id/Starting_Pitcher_Name_Text_View"/>
+    <Button style="?android:attr/buttonStyleSmall" android:layout_width="50dp" android:layout_height="50dp"
+            android:text="-" android:id="@+id/Outs_Starter_Minus_Button" android:background="#fb5c5c"
+            android:textSize="40dp" android:textStyle="bold"
+            android:layout_alignBottom="@+id/Outs_Text_View" android:layout_toStartOf="@+id/Last_Name_Starter_Edit_Text"
+            android:layout_marginEnd="27dp"/>
+    <EditText android:layout_width="100dp" android:layout_height="wrap_content" android:id="@+id/Outs_Edit_Text"
+              android:layout_alignBottom="@+id/Outs_Text_View"
+              android:layout_alignEnd="@+id/Last_Name_Starter_Edit_Text" android:layout_marginEnd="32dp"/>
+    <Button style="?android:attr/buttonStyleSmall" android:layout_width="50dp" android:layout_height="50dp"
+            android:text="+" android:id="@+id/Outs_Starter_Plus_Button" android:textSize="40dp"
+            android:textStyle="bold" android:background="#9dc4e7"
+            android:layout_alignBottom="@+id/Outs_Edit_Text"
+            android:layout_alignEnd="@+id/Starting_Pitcher_Name_Text_View" android:layout_marginEnd="29dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:id="@+id/Result_Text_View" android:layout_below="@+id/Balls_Edit_Text"
+            android:layout_centerHorizontal="true" android:layout_marginTop="44dp" android:textSize="30dp"/>
+    <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Win"
+            android:id="@+id/Win_Radio_Button"
+            android:layout_marginTop="21dp" android:checked="false"
+            android:layout_below="@+id/Result_Text_View" android:layout_toStartOf="@+id/Relief_Button"
+            android:textSize="26dp"/>
+    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loss"
+                 android:id="@+id/Loss_Radio_Button" android:checked="false"
+                 android:layout_below="@+id/Win_Radio_Button" android:layout_alignStart="@+id/Win_Radio_Button"
+                 android:layout_marginTop="19dp" android:textSize="26dp"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/Thumbs_Up"
+            android:id="@+id/Thumbs_Up_Image_View"
+            android:layout_above="@+id/Loss_Radio_Button" android:layout_alignStart="@+id/Balls_Starter_Plus_Button"/>
+    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/Thumbs_Down"
+               android:id="@+id/Thumbs_Down_Image_View"
+               android:layout_alignBottom="@+id/Loss_Radio_Button"
+               android:layout_alignStart="@+id/Thumbs_Up_Image_View"/>
+</RelativeLayout>
+
